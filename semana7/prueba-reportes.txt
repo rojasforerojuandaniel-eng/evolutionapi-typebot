@@ -1,0 +1,15 @@
+Al consultar la ruta GET /reportes, el servidor responde con un array en formato JSON que contiene todos los reportes que han sido registrados previamente mediante la ruta POST.
+
+Si aun no se ha enviado ningun reporte, el resultado sera un array vacio: [].
+
+Despues de enviar un reporte con POST, al consultar GET /reportes se obtiene el reporte guardado, por ejemplo:
+
+[
+  {
+    "id": 1,
+    "tipo": "Infraestructura",
+    "descripcion": "Dano en alumbrado publico"
+  }
+]
+
+Esto demuestra que los datos se almacenan temporalmente en memoria mientras el servidor esta encendido.
